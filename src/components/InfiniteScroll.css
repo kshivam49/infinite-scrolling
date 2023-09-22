@@ -1,0 +1,68 @@
+/* Container styles */
+.infinite-scroll-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Make the container full viewport height */
+}
+
+  /* Item styles */
+  .item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .item h2 {
+    font-size: 16px;
+    margin: 10px 0;
+    /* Add more styles as needed for the name */
+  }
+  
+  .item p {
+    font-size: 14px;
+    color: #888;
+    /* Add more styles as needed for the price */
+  }
+  
+ /* Spinner styles */
+.loading-spinner {
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  }
+  
+  .spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: red;
+    text-align: center;
+    padding: 20px;
+  }
