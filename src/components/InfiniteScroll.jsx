@@ -28,6 +28,8 @@ const InfiniteScroll = () => {
       setError(err);
     } finally {
       setLoading(false);
+
+      
     }
   };
   
@@ -46,8 +48,8 @@ const InfiniteScroll = () => {
     const windowHeight = window.innerHeight;
     const contentHeight = document.documentElement.scrollHeight;
 
-    if (scrollY + windowHeight >= contentHeight - 200) {
-      // Adjust the 200 to control when the next batch of items should load
+    if (scrollY + windowHeight >= contentHeight - 100) {
+      // Adjust the 100 to control when the next batch of items should load
       loadMoreItems();
     }
   };
